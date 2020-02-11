@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, url_for
 from newspaper import Article
 from xml.etree  import ElementTree
+import nltk
 
 app = Flask(__name__)
 
@@ -26,7 +27,7 @@ def show_article():
     if not url_to_clean:
         return redirect(url_for('index'))
 
-    article = Article(url_to_clean)
+    article = Article(url_to_clean, language='vi')
     article.download()
     article.parse()
 
@@ -36,7 +37,8 @@ def show_article():
       html_string = "Error converting html to string."
 
     try:
-      article.nlp()
+      nltk.download('punkt')#1 time download of the sentence tokenizer
+      article.nlp()#  Keyword extraction wrapper
     except:
       log.error("Couldn't process with NLP")
 
