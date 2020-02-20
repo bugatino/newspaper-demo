@@ -3,7 +3,7 @@
   <div class="container article-page">
     <div class="table-responsive">
       <h3>Extracted Data</h3>
-      <p>{{ url }}</p>
+      <div class="alert alert-success break-word" role="alert">{{ url }}</div>
       <table class="table">
         <tbody>
           <tr>
@@ -15,10 +15,6 @@
             <td>{{ article.authors }}</td>
           </tr>
           <tr>
-            <td>Text</td>
-            <td>{{ article.text }}</td>
-          </tr>
-          <tr>
             <td>Top Image</td>
             <td>
               <img src="{{ article.top_image }}"/>
@@ -26,18 +22,22 @@
             </td>
           </tr>
           <tr>
-            <td>Movies (Videos)</td>
-            <td>{{ article.videos }}</td>
-          </tr>
-          <tr>
-            <td>Keywords (NLP)</td>
-            <td>{{ article.keywords }}</td>
-          </tr>
-          <tr>
             <td>Summary (NLP)</td>
             <td>{{ article.summary }}</td>
           </tr>
           <tr>
+            <td>Text</td>
+            <td>{{ article.text }}</td>
+          </tr>
+          <!-- <tr>
+            <td>Movies (Videos)</td>
+            <td>{{ article.videos }}</td>
+          </tr> -->
+          <tr>
+            <td>Keywords (NLP)</td>
+            <td>{{ article.keywords }}</td>
+          </tr>
+          <!-- <tr>
             <td>Article HTML</td>
             <td>
               <pre>
@@ -46,7 +46,7 @@
                 </code>
               </pre>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>

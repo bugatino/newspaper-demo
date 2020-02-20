@@ -1,13 +1,13 @@
 /* Wide styles */
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    background: #fafafa;
+    background: #333;
     font-weight: 300;
     margin: 0;
     padding: 0;
 }
 p {
-  padding-bottom: 30px;
+  padding-bottom: 5px;
 }
 img {
     display: block;
@@ -57,9 +57,9 @@ img {
 }
 .container.article-page {
     padding: 20px 15px 50px;
-    background-color: #fff;
-    color: rgba(0,0,0,0.8);
-    font-family: 'Lora', serif;
+    background-color: #1d1d1d;
+    color: #ccc;
+    /* font-family: 'Lora', serif; */
     letter-spacing: 0.01rem;
     font-weight: 400;
     font-style: normal;
@@ -74,4 +74,12 @@ tr td:first-child {
 }
 tr td:last-child {
   max-width: 700px;
+}
+
+.table>tbody>tr>td {
+    border-top: 1px solid #333 !important;
+}
+
+.break-word {
+    word-break: break-all;
 }
